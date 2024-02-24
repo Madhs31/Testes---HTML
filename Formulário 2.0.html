@@ -1,0 +1,26 @@
+<!doctype html!>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title> formulário 2.0 </title>
+<head>
+<body>
+<h1> Faça sua reserva agora mesmo! </h1>
+<form>
+<fieldset>
+<legend> Dados pessoais </legend>
+<p> <label> Nome completo: <input type="text" name="nome_completo" required"> </label> </p>
+<p> <label> Telefone: <input type="tel" required> </label> </p>
+</fieldset>
+<fieldset>
+<legend> Dados da reserva </legend>
+<p> <label> Data da entrada: <input type="date" min="2020-01-01" max="2020-07-31" value="2020-07-14"> </label> </p>
+<p> <label> Diárias: <input type="number" name="diárias" min="1" max="15" value="1"> </label> </p>
+<fieldset>
+<legend> Hóspedes </legend>
+<P> <label> Quantidade de hóspedes: <input type="number" min="1" max="4" value="1"> </label> </p>
+</fieldset>
+<p> <label> <input type="submit" value="Enviar"> </label> </p>
+</form>
+</body>
+</html>

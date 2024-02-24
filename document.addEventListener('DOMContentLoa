@@ -1,0 +1,28 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const likeButtons = document.querySelectorAll('.like-btn');
+    const commentButtons = document.querySelectorAll('.comment-btn');
+
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const post = this.closest('.post');
+            const likes = post.querySelector('.likes');
+            
+            let currentLikes = parseInt(likes.innerText, 10);
+            currentLikes += 1;
+            
+            likes.innerText = currentLikes === 1 ? `${currentLikes} Curtida` : `${currentLikes} Curtidas`;
+        });
+    });
+
+    commentButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const post = this.closest('.post');
+            const comments = post.querySelector('.comments');
+            
+            let currentComments = parseInt(comments.innerText, 10);
+            currentComments += 1;
+            
+            comments.innerText = currentComments === 1 ? `${currentComments} Comentário` : `${currentComments} Comentários`;
+        });
+    });
+});
